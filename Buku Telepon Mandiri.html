@@ -1,0 +1,451 @@
+<!doctype html><html lang="id"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Buku Telepon Mandiri</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky header with search, alphabetical directory with yellow letter tabs, floating add button; secondary actions in a menu sheet. */
+:root{
+  --bg:#f3f5f8; --surface:#ffffff; --ink:#12263f; --muted:#56677d; --line:#d9e0ea;
+  --btn-bg:#1f4e8c; --btn-fg:#ffffff; --soft:#e7edf5; --soft-fg:#1b3a5e;
+  --tab:#f5c518; --tab-fg:#2a2100;
+  --danger:#b42318; --danger-bg:#fdecea; --ok:#17663a; --ok-bg:#e6f5ec; --warn-bg:#fff4d6; --warn-fg:#5c4400;
+  --wa:#17784a; --shadow:0 6px 24px rgb(18 38 63 / .14);
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1622; --surface:#16212f; --ink:#e6edf5; --muted:#93a3b8; --line:#273649;
+  --btn-bg:#7db2f5; --btn-fg:#0a1828; --soft:#223247; --soft-fg:#d4e2f3;
+  --tab:#f5c518; --tab-fg:#2a2100;
+  --danger:#ff9a90; --danger-bg:#3a1c1a; --ok:#79dba1; --ok-bg:#15301f; --warn-bg:#3a3010; --warn-fg:#f4dc90;
+  --wa:#49cf90; --shadow:0 6px 24px rgb(0 0 0 / .5); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1622; --surface:#16212f; --ink:#e6edf5; --muted:#93a3b8; --line:#273649;
+  --btn-bg:#7db2f5; --btn-fg:#0a1828; --soft:#223247; --soft-fg:#d4e2f3;
+  --tab:#f5c518; --tab-fg:#2a2100;
+  --danger:#ff9a90; --danger-bg:#3a1c1a; --ok:#79dba1; --ok-bg:#15301f; --warn-bg:#3a3010; --warn-fg:#f4dc90;
+  --wa:#49cf90; --shadow:0 6px 24px rgb(0 0 0 / .5); color-scheme:dark}
+
+/* accent palettes (override the default blue/yellow); later rules win ties */
+:root[data-accent="hijau"]{--btn-bg:#1d6b4a;--btn-fg:#ffffff;--soft:#e2f1e9;--soft-fg:#174d37;--tab:#b7e36b;--tab-fg:#1c2e06}
+:root[data-accent="ungu"]{--btn-bg:#5b3fa8;--btn-fg:#ffffff;--soft:#ece7f8;--soft-fg:#3f2a7a;--tab:#f2a7d4;--tab-fg:#3a0f2b}
+:root[data-accent="jingga"]{--btn-bg:#b4501a;--btn-fg:#ffffff;--soft:#fbeadf;--soft-fg:#7a3410;--tab:#264b73;--tab-fg:#ffffff}
+:root[data-accent="grafit"]{--btn-bg:#2f3a48;--btn-fg:#ffffff;--soft:#e8ebef;--soft-fg:#2b3441;--tab:#cfd6df;--tab-fg:#1b222c}
+@media (prefers-color-scheme:dark){
+ :root[data-accent="hijau"]:not([data-theme="light"]){--btn-bg:#6fd1a0;--btn-fg:#07241a;--soft:#1d3a2d;--soft-fg:#cdeedd;--tab:#b7e36b;--tab-fg:#1c2e06}
+ :root[data-accent="ungu"]:not([data-theme="light"]){--btn-bg:#b9a3f5;--btn-fg:#1a0f3d;--soft:#2c2447;--soft-fg:#e0d6fb;--tab:#f2a7d4;--tab-fg:#3a0f2b}
+ :root[data-accent="jingga"]:not([data-theme="light"]){--btn-bg:#f0a070;--btn-fg:#3a1604;--soft:#3b2a1f;--soft-fg:#f6d8c4;--tab:#5d8fc4;--tab-fg:#08192c}
+ :root[data-accent="grafit"]:not([data-theme="light"]){--btn-bg:#cfd8e3;--btn-fg:#12171e;--soft:#252e3a;--soft-fg:#dbe3ed;--tab:#566274;--tab-fg:#f1f4f8}
+}
+:root[data-accent="hijau"][data-theme="dark"]{--btn-bg:#6fd1a0;--btn-fg:#07241a;--soft:#1d3a2d;--soft-fg:#cdeedd;--tab:#b7e36b;--tab-fg:#1c2e06}
+:root[data-accent="ungu"][data-theme="dark"]{--btn-bg:#b9a3f5;--btn-fg:#1a0f3d;--soft:#2c2447;--soft-fg:#e0d6fb;--tab:#f2a7d4;--tab-fg:#3a0f2b}
+:root[data-accent="jingga"][data-theme="dark"]{--btn-bg:#f0a070;--btn-fg:#3a1604;--soft:#3b2a1f;--soft-fg:#f6d8c4;--tab:#5d8fc4;--tab-fg:#08192c}
+:root[data-accent="grafit"][data-theme="dark"]{--btn-bg:#cfd8e3;--btn-fg:#12171e;--soft:#252e3a;--soft-fg:#dbe3ed;--tab:#566274;--tab-fg:#f1f4f8}
+.look{display:grid;gap:10px;padding-top:4px}
+.look h3{margin:0;font:700 14px var(--f-display)}
+.seg{display:flex;gap:6px}.seg .btn{flex:1;padding:0 8px}
+.btn[aria-pressed="true"]{background:var(--btn-bg);color:var(--btn-fg)}
+.swatches{display:flex;flex-wrap:wrap;gap:4px}
+.sw{all:unset;box-sizing:border-box;cursor:pointer;display:grid;justify-items:center;gap:4px;width:66px;padding:4px 2px;border-radius:12px;font-size:11px;line-height:1.2;text-align:center;color:var(--muted)}
+.sw i{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--c1) 50%,var(--c2) 50%);border:2px solid var(--line)}
+.sw[aria-pressed="true"]{color:var(--ink);font-weight:600}
+.sw[aria-pressed="true"] i{outline:3px solid var(--ink);outline-offset:2px}
+.sw:focus-visible{outline:3px solid var(--tab)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 var(--f-body);
+  padding-block:0 96px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--tab);outline-offset:2px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);padding:14px 0 10px;display:grid;gap:10px}
+.brandrow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.brand{min-width:0}
+h1{margin:0;font:700 24px/1.1 var(--f-display);letter-spacing:-.01em;text-wrap:balance}
+h1::after{content:"";display:block;width:44px;height:5px;border-radius:3px;background:var(--tab);margin-top:7px}
+#countLine{margin:6px 0 0;color:var(--muted);font-size:13px}
+#search{width:100%;min-height:46px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:0 14px;border:0;border-radius:10px;
+  background:var(--soft);color:var(--soft-fg);font-weight:600;font-size:14px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn.primary{background:var(--btn-bg);color:var(--btn-fg)}
+.btn.danger{background:var(--danger-bg);color:var(--danger)}
+.btn.wa{background:var(--ok-bg);color:var(--wa)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+.notice{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 4px;padding:12px 14px;border-radius:12px;
+  background:var(--warn-bg);color:var(--warn-fg);font-size:14px}
+.notice[hidden]{display:none}
+
+.group{margin-top:16px}
+.tab{display:inline-block;margin:0 0 8px;padding:2px 12px;border-radius:6px;background:var(--tab);color:var(--tab-fg);font:700 15px/1.6 var(--f-display)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 8px 6px 4px}
+.card .main{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:2px;min-width:0;padding:8px 10px;border-radius:10px}
+.card .main:focus-visible{outline:3px solid var(--tab)}
+.nm{font-weight:600;font-size:16px;overflow-wrap:anywhere}
+.ph{font:500 14px var(--f-mono);color:var(--muted);overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.ds{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.quick{display:flex;gap:6px}
+.quick .btn{min-height:40px;padding:0 12px}
+@media (max-width:420px){.card{grid-template-columns:minmax(0,1fr)}.quick{padding:0 6px 6px}.quick .btn{flex:1}}
+.empty{margin-top:28px;padding:28px 18px;text-align:center;background:var(--surface);border:1px dashed var(--line);border-radius:14px;display:grid;gap:12px;justify-items:center}
+.empty p{margin:0;color:var(--muted);max-width:36ch}
+.empty h2{margin:0;font:700 18px var(--f-display)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+
+.fab{position:fixed;z-index:15;bottom:calc(16px + env(safe-area-inset-bottom,0px));right:max(16px,env(safe-area-inset-right,0px));
+  min-height:54px;padding:0 22px;border:0;border-radius:27px;background:var(--tab);color:var(--tab-fg);font:700 16px var(--f-display);box-shadow:var(--shadow);cursor:pointer}
+
+dialog{border:0;border-radius:18px;padding:0;width:min(520px,calc(100vw - 32px));max-height:calc(100dvh - 32px);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+dialog::backdrop{background:rgb(8 16 28 / .55)}
+.dlg{padding:20px;display:grid;gap:12px}
+.dlg h2{margin:0;font:700 20px/1.2 var(--f-display)}
+.dlg p{margin:0;color:var(--muted);font-size:14px}
+label{font-size:13px;font-weight:600;display:block;margin-bottom:5px}
+.dlg input,.dlg textarea{width:100%;min-height:44px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg)}
+textarea{min-height:130px;resize:vertical}
+.xrow{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) auto;gap:6px;align-items:center}
+.xrow .btn{min-height:44px;padding:0 14px}
+.pgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:6px}
+.nrow{display:grid;gap:8px;padding:10px 0;border-top:1px solid var(--line)}
+.nrow:first-of-type{border-top:0;padding-top:0}
+.nrow small{display:block;color:var(--muted);font-size:12px}
+.nrow .big{font-size:18px}
+.nact{display:flex;gap:6px;flex-wrap:wrap}.nact .btn{min-height:38px;padding:0 12px}
+.more{font-size:12px;font-weight:600;color:var(--soft-fg);background:var(--soft);justify-self:start;padding:1px 8px;border-radius:999px;margin-top:2px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:8px 0 2px;color:var(--muted);font-size:13px}
+.big{font:500 22px var(--f-mono);overflow-wrap:anywhere;user-select:all;font-variant-numeric:tabular-nums}
+.menu{display:grid;gap:8px}
+.menu .btn{justify-content:flex-start;min-height:48px;white-space:normal;text-align:left}
+.menu small{display:block;font-weight:400;opacity:.8}
+#parseInfo,#storageStatus,#backupInfo{font-size:13px;color:var(--muted)}
+
+#toast{position:fixed;z-index:60;left:50%;transform:translateX(-50%);bottom:calc(86px + env(safe-area-inset-bottom,0px));max-width:calc(100vw - 32px);
+  padding:11px 16px;border-radius:12px;background:var(--ink);color:var(--bg);font-size:14px;box-shadow:var(--shadow)}
+#toast.error{background:var(--danger);color:var(--bg)}
+#toast[hidden]{display:none}
+#toast{display:flex;align-items:center;gap:14px}
+#toast button{all:unset;cursor:pointer;font-weight:700;text-decoration:underline;padding:6px 4px}
+#toast button:focus-visible{outline:3px solid var(--tab)}
+.az{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.az::-webkit-scrollbar{display:none}
+.az button{all:unset;box-sizing:border-box;flex:none;min-width:36px;height:36px;display:grid;place-items:center;border-radius:9px;background:var(--soft);color:var(--soft-fg);font:700 13px var(--f-display);cursor:pointer}
+.az button:focus-visible{outline:3px solid var(--tab)}
+@media (prefers-reduced-motion:no-preference){.fab,.btn{transition:transform .12s}.fab:active,.btn:active{transform:scale(.97)}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brandrow">
+      <div class="brand"><h1>Buku Telepon Mandiri</h1><p id="countLine">Memuat…</p></div>
+      <button class="btn" id="menuBtn" type="button">Menu</button>
+    </div>
+    <input id="search" type="search" placeholder="Cari nama, nomor, atau keterangan" autocomplete="off">
+    <nav id="az" class="az" aria-label="Loncat ke huruf" hidden></nav>
+  </header>
+  <main>
+    <div id="notice" class="notice" hidden></div>
+    <div id="contactList"></div>
+  </main>
+</div>
+<button class="fab" id="fab" type="button">+ Tambah kontak</button>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="formDlg"><form class="dlg" id="form" autocomplete="off">
+  <h2 id="formTitle">Tambah kontak</h2>
+  <input type="hidden" id="editId">
+  <div><label for="name">Nama</label><input id="name" required maxlength="100" placeholder="Contoh: Budi Santoso"></div>
+  <div><label for="phone">No. telepon</label><div class="pgrid"><input id="phone" required maxlength="40" inputmode="tel" placeholder="Contoh: 081234567890"><input id="plabel" maxlength="30" placeholder="Label" aria-label="Label nomor utama"></div></div>
+  <div id="extraBox"><div id="extraList" class="menu"></div><button class="btn" type="button" id="addNumBtn">+ Tambah nomor lain</button></div>
+  <div><label for="description">Keterangan</label><textarea id="description" maxlength="500" placeholder="Contoh: Grup RT, bagian keuangan"></textarea></div>
+  <div class="row"><button class="btn primary" type="submit" id="saveBtn">Simpan</button><button class="btn" type="button" id="formCancel">Batal</button></div>
+</form></dialog>
+
+<dialog id="viewDlg"><div class="dlg">
+  <h2 id="vName"></h2>
+  <div id="vNums"></div>
+  <p id="vDesc"></p>
+  <div class="row"><button class="btn primary" id="vAddNum" type="button">+ Tambah nomor</button></div>
+  <div class="row"><button class="btn" id="vEdit" type="button">Edit</button><button class="btn danger" id="vDel" type="button">Hapus</button><button class="btn" id="vClose" type="button">Tutup</button></div>
+</div></dialog>
+
+<dialog id="bulkDlg"><div class="dlg">
+  <h2>Tambah banyak kontak</h2>
+  <p>Tempel satu kontak per baris. Format bebas: <em>Nama, Nomor, Keterangan</em>, atau hasil salin dari WhatsApp seperti <em>~ Budi +62 812-3456-7890</em>. Baris yang hanya berisi nomor disimpan dengan nomor sebagai nama. Nomor yang sudah ada dilewati.</p>
+  <textarea id="bulkText" placeholder="Budi Santoso, 081234567890, Grup RT&#10;~ Siti Aminah +62 822-3344-5566&#10;+62 857-1112-2233"></textarea>
+  <div id="parseInfo">Belum ada baris.</div>
+  <div class="row"><button class="btn primary" id="bulkAdd" type="button">Tambahkan</button><button class="btn" id="bulkClose" type="button">Tutup</button></div>
+</div></dialog>
+
+<dialog id="menuDlg"><div class="dlg">
+  <h2>Menu</h2>
+  <div class="menu">
+    <button class="btn" id="mBulk" type="button"><span>Tambah banyak sekaligus<small>Tempel daftar, termasuk hasil salin dari WhatsApp</small></span></button>
+    <button class="btn" id="mImport" type="button"><span>Impor CSV<small>Dari Excel atau Google Sheets (kolom Nama, No Telepon, Keterangan, Nomor Lain, Label)</small></span></button>
+    <button class="btn" id="mExport" type="button"><span>Ekspor ke Excel (CSV)<small>Pemisah titik koma, angka 0 di depan nomor tetap ada</small></span></button>
+    <button class="btn" id="mTidy" type="button"><span>Rapikan semua kontak<small>Nama HURUF KAPITAL, nomor diawali 0 dan dipisah tiap 4 angka</small></span></button>
+    <button class="btn" id="mBackup" type="button"><span>Simpan cadangan JSON<small>Cara paling aman memindahkan atau menyelamatkan data</small></span></button>
+    <button class="btn" id="mRestore" type="button"><span>Pulihkan dari cadangan JSON<small>Mengganti seluruh kontak yang ada</small></span></button>
+  </div>
+  <div class="look"><h3>Tampilan</h3>
+    <div class="seg" role="group" aria-label="Tema">
+      <button class="btn" type="button" data-theme-pick="auto" aria-pressed="false">Otomatis</button>
+      <button class="btn" type="button" data-theme-pick="light" aria-pressed="false">Terang</button>
+      <button class="btn" type="button" data-theme-pick="dark" aria-pressed="false">Gelap</button>
+    </div>
+    <div class="swatches" id="accentRow" role="group" aria-label="Warna"></div>
+  </div>
+  <div id="backupInfo"></div>
+  <div id="storageStatus">Memeriksa penyimpanan…</div>
+  <button class="btn" id="menuClose" type="button">Tutup</button>
+</div></dialog>
+
+<dialog id="labelDlg"><form class="dlg" id="labelForm" autocomplete="off">
+  <h2>Beri label</h2><p id="labelInfo"></p>
+  <div><label for="lblText">Label</label><input id="lblText" required maxlength="30" placeholder="Contoh: SECURITY"></div>
+  <div class="row"><button class="btn primary" type="submit">Terapkan</button><button class="btn" type="button" id="labelCancel">Batal</button></div>
+</form></dialog>
+
+<dialog id="askDlg"><div class="dlg">
+  <h2 id="askTitle"></h2><p id="askText"></p>
+  <div class="row" id="askBtns"></div>
+</div></dialog>
+
+<input type="file" id="csvFile" accept=".csv,text/csv,text/plain" hidden>
+<input type="file" id="jsonFile" accept=".json,application/json" hidden>
+
+<script>
+const $=id=>document.getElementById(id);
+const DB_NAME='BukuTeleponMandiriDB',DB_VERSION=1,STORE='contacts';
+let dbp=null,contacts=[],busy=false,dbError=null;
+let mode='idb',cloud=null,meta={},syncTimer=null,lastList=[];
+const PALETTES=[{k:'kuning',n:'Biru Kuning',a:'#1f4e8c',b:'#f5c518'},{k:'hijau',n:'Hijau Daun',a:'#1d6b4a',b:'#b7e36b'},{k:'ungu',n:'Ungu Senja',a:'#5b3fa8',b:'#f2a7d4'},{k:'jingga',n:'Jingga Hangat',a:'#b4501a',b:'#264b73'},{k:'grafit',n:'Grafit',a:'#2f3a48',b:'#cfd6df'}];
+const htmlEl=document.documentElement,hostTheme=htmlEl.getAttribute('data-theme');
+let prefs={theme:'auto',accent:'hijau'};
+try{const sv=JSON.parse(localStorage.getItem('prefs')||'null');if(sv)prefs={...prefs,...sv}}catch{}
+function applyPrefs(){
+  if(prefs.theme==='auto'){if(hostTheme)htmlEl.setAttribute('data-theme',hostTheme);else htmlEl.removeAttribute('data-theme')}else htmlEl.setAttribute('data-theme',prefs.theme);
+  if(prefs.accent&&prefs.accent!=='kuning')htmlEl.setAttribute('data-accent',prefs.accent);else htmlEl.removeAttribute('data-accent');
+  document.querySelectorAll('[data-theme-pick]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.themePick===prefs.theme)));
+  document.querySelectorAll('[data-accent-pick]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.accentPick===prefs.accent)))}
+async function setPrefs(patch){prefs={...prefs,...patch};applyPrefs();try{localStorage.setItem('prefs',JSON.stringify(prefs))}catch{}if(mode==='cloud')await setMeta({prefs})}
+$('accentRow').innerHTML=PALETTES.map(p=>'<button class="sw" type="button" data-accent-pick="'+p.k+'" aria-pressed="false" aria-label="Warna '+p.n+'" style="--c1:'+p.a+';--c2:'+p.b+'"><i></i><span>'+p.n+'</span></button>').join('');
+$('menuDlg').addEventListener('click',e=>{const t=e.target.closest('[data-theme-pick]');if(t)setPrefs({theme:t.dataset.themePick});const a=e.target.closest('[data-accent-pick]');if(a)setPrefs({accent:a.dataset.accentPick})});
+applyPrefs();
+const SYNC_OK='Tersimpan di akun Claude Anda, privat dan tersinkron antar perangkat. Cadangan JSON tetap berguna sebagai arsip.';
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+let toastTimer;
+function toast(msg,type){const t=$('toast');t.textContent=msg;t.className=type||'';t.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{t.hidden=true},type==='error'?5000:2800)}
+function toastUndo(msg,fn){const t=$('toast');t.className='';t.replaceChildren();const s=document.createElement('span');s.textContent=msg;const b=document.createElement('button');b.type='button';b.textContent='Urungkan';
+  b.onclick=async()=>{t.hidden=true;clearTimeout(toastTimer);try{await fn();toast('Kontak dikembalikan.')}catch(e){toast('Gagal mengembalikan: '+e.message,'error')}};
+  t.append(s,b);t.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{t.hidden=true},7000)}
+function allNums(c){return[{n:c.phone,l:c.label||''},...(Array.isArray(c.phones)?c.phones:[])]}
+function rawClean(x){const o={name:String(x.name||'').trim(),phone:String(x.phone||'').trim(),description:String(x.description||'').trim()};const lb=String(x.label||'').trim();if(lb)o.label=lb;
+  const ph=(Array.isArray(x.phones)?x.phones:[]).map(p=>({n:String(p&&p.n||'').trim(),l:String(p&&p.l||'').trim()})).filter(p=>p.n);if(ph.length)o.phones=ph;return o}
+function localPhoneRaw(p){const t=String(p||'').trim();const m=t.match(/^(?:\+|00)?62[\s.-]*(?:\(0\))?[\s.-]*(\d[\d\s().-]*)$/);if(m&&m[1].replace(/\D/g,'').length>=7)return '0'+m[1];if(/^8\d[\d\s().-]{7,}$/.test(t))return '0'+t;return t}
+function toLocalPhone(p){const t=localPhoneRaw(p);if(/^\(?0\d[\d\s().-]*$/.test(t)){const d=t.replace(/\D/g,'');return d.match(/.{1,4}/g).join('-')}return t}
+function fmtContact(o){const r={...o,name:String(o.name||'').toLocaleUpperCase('id'),phone:toLocalPhone(o.phone)};if(Array.isArray(o.phones))r.phones=o.phones.map(p=>({...p,n:toLocalPhone(p.n)}));return r}
+function cleanContact(x){return fmtContact(rawClean(x))}
+function normPhone(p){let d=String(p||'').replace(/\D/g,'');if(d.startsWith('62'))d='0'+d.slice(2);return d}
+function telLink(p){const t=String(p||'').trim();return 'tel:'+(t.startsWith('+')?'+':'')+t.replace(/\D/g,'')}
+function waLink(p){let d=String(p||'').replace(/\D/g,'');if(d.startsWith('0'))d='62'+d.slice(1);return 'https://wa.me/'+d}
+async function copyText(text){
+  try{await navigator.clipboard.writeText(text);toast('Disalin.');return}catch{}
+  try{const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();const ok=document.execCommand('copy');t.remove();if(ok){toast('Disalin.');return}}catch{}
+  toast('Tidak bisa menyalin otomatis. Tekan lama nomor untuk memilihnya.','error')
+}
+function ask({title,text,buttons}){return new Promise(res=>{const dlg=$('askDlg');let val=null;$('askTitle').textContent=title;$('askText').textContent=text;const box=$('askBtns');box.replaceChildren();
+  buttons.forEach(b=>{const el=document.createElement('button');el.type='button';el.className='btn '+(b.kind||'');el.textContent=b.label;el.onclick=()=>{val=b.value;dlg.close()};box.append(el)});
+  dlg.onclose=()=>res(val);dlg.showModal()})}
+document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d&&d.id!=='askDlg')d.close()}));
+
+/* ---------- storage (IndexedDB, per browser) ---------- */
+function openDB(){if(dbp)return dbp;dbp=new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=()=>{const d=req.result;if(!d.objectStoreNames.contains(STORE)){const st=d.createObjectStore(STORE,{keyPath:'id',autoIncrement:true});st.createIndex('name','name',{unique:false})}};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)});return dbp}
+async function idbAll(){const d=await openDB();return new Promise((resolve,reject)=>{const r=d.transaction(STORE,'readonly').objectStore(STORE).getAll();r.onsuccess=()=>resolve(r.result||[]);r.onerror=()=>reject(r.error)})}
+async function idbPut(item){const d=await openDB();return new Promise((resolve,reject)=>{const tx=d.transaction(STORE,'readwrite');const st=tx.objectStore(STORE);const r=item.id?st.put(item):st.add(item);let key;r.onsuccess=()=>{key=r.result};tx.oncomplete=()=>resolve(key);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
+async function idbDel(id){const d=await openDB();return new Promise((resolve,reject)=>{const tx=d.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(Number(id));tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
+async function idbReplace(items){const d=await openDB();return new Promise((resolve,reject)=>{const tx=d.transaction(STORE,'readwrite'),st=tx.objectStore(STORE);st.clear();items.forEach(x=>{const item=cleanContact(x);if(item.name&&item.phone)st.add(item)});tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error)})}
+async function idbAddAll(fresh){const d=await openDB();await new Promise((res,rej)=>{const tx=d.transaction(STORE,'readwrite');const st=tx.objectStore(STORE);fresh.forEach(x=>st.add(x));tx.oncomplete=res;tx.onerror=()=>rej(tx.error);tx.onabort=()=>rej(tx.error)})}
+async function pool(items,fn,n=6){let i=0;const run=async()=>{while(i<items.length){const x=items[i++];await fn(x)}};await Promise.all(Array.from({length:Math.min(n,items.length)},run))}
+function planAdd(items){const seen=new Set(contacts.flatMap(c=>allNums(c).map(x=>normPhone(x.n))));const fresh=[];let dup=0;
+  for(const x of items){const k=normPhone(x.phone);if(!k||seen.has(k)){dup++;continue}seen.add(k);const o=cleanContact(x);const ks=new Set([k]);if(o.phones){o.phones=o.phones.filter(p=>{const pk=normPhone(p.n);if(!pk||ks.has(pk))return false;ks.add(pk);return true});if(!o.phones.length)delete o.phones}ks.forEach(v=>seen.add(v));fresh.push({...o,updatedAt:new Date().toISOString()})}
+  return{fresh,dup}}
+async function addMany(items){const{fresh,dup}=planAdd(items);if(mode==='cloud')await pool(fresh,x=>cloud.col.doc().set(x));else await idbAddAll(fresh);return{added:fresh.length,dup}}
+async function putContact(item){if(mode==='cloud'){const{id,...data}=item;const ref=id?cloud.col.doc(String(id)):cloud.col.doc();await ref.set(data);return ref.id}return idbPut(item)}
+async function deleteById(id){if(mode==='cloud')return cloud.col.doc(String(id)).delete();return idbDel(id)}
+async function replaceAll(items){const clean=items.map(cleanContact).filter(x=>x.name&&x.phone);
+  if(mode!=='cloud')return idbReplace(clean);
+  const old=contacts.map(c=>c.id);await pool(clean,x=>cloud.col.doc().set({...x,updatedAt:new Date().toISOString()}));await pool(old,id=>cloud.col.doc(id).delete())}
+async function setMeta(patch){meta={...meta,...patch};try{await cloud.book.set(meta)}catch{}}
+async function refresh(){if(mode==='cloud')return;contacts=await idbAll();render()}
+
+/* ---------- backup bookkeeping (per viewer) ---------- */
+function lastBackup(){if(mode==='cloud')return meta.lastBackup||null;try{return localStorage.getItem('lastBackup')}catch{return null}}
+async function markBackup(){const t=new Date().toISOString();if(mode==='cloud')await setMeta({lastBackup:t});else{try{localStorage.setItem('lastBackup',t)}catch{}}}
+function backupAgeDays(){const t=lastBackup();return t?Math.floor((Date.now()-new Date(t))/864e5):null}
+function renderBackupInfo(){const t=lastBackup();$('backupInfo').textContent=t?'Cadangan terakhir: '+new Date(t).toLocaleString('id-ID'):'Belum pernah menyimpan cadangan.'}
+
+/* ---------- render ---------- */
+let azIdx=[];
+function renderAZ(){const nav=$('az'),show=azIdx.length>=4&&contacts.length>=12&&!$('search').value.trim();nav.hidden=!show;
+  nav.innerHTML=show?azIdx.map((k,i)=>'<button type="button" data-i="'+i+'" aria-label="Loncat ke huruf '+esc(k)+'">'+esc(k)+'</button>').join(''):''}
+$('az').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const el=$('g'+b.dataset.i);if(!el)return;
+  el.style.scrollMarginTop=(document.querySelector('header.top').offsetHeight+4)+'px';el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'})});
+function renderNotice(){const n=$('notice');const age=backupAgeDays();if(mode==='cloud'&&!dbError){n.hidden=true;return}
+  if(dbError){n.hidden=false;n.textContent='Penyimpanan di browser ini tidak bisa dibuka: '+dbError;return}
+  if(contacts.length&&(age===null||age>=14)){n.hidden=false;n.innerHTML='<span>'+(age===null?'Kontak ini belum pernah dicadangkan.':'Cadangan terakhir '+age+' hari lalu.')+' Data hanya ada di browser ini.</span><button class="btn" id="noticeBackup" type="button">Cadangkan sekarang</button>';$('noticeBackup').onclick=doBackup}
+  else n.hidden=true}
+function render(){
+  const raw=$('search').value.trim(),q=raw.toLocaleLowerCase('id');
+  const phoneQ=/^[\d\s+().-]{3,}$/.test(raw)?normPhone(raw):'';
+  const list=contacts.filter(c=>!q||[c.name,c.description,c.label,...allNums(c).map(x=>x.n+' '+x.l)].join(' ').toLocaleLowerCase('id').includes(q)||(phoneQ&&allNums(c).some(x=>normPhone(x.n).includes(phoneQ))))
+    .sort((a,b)=>a.name.localeCompare(b.name,'id',{sensitivity:'base'}));
+  lastList=list;azIdx=[];$('countLine').textContent=contacts.length+' kontak'+(q?' · '+list.length+' cocok':'')+(mode==='cloud'?'':' · hanya di browser ini');
+  const box=$('contactList');
+  if(!contacts.length){box.innerHTML='<div class="empty"><h2>Belum ada kontak</h2><p>Tambahkan kontak pertama, tempel daftar dari WhatsApp, atau pulihkan dari cadangan JSON.</p><div class="row"><button class="btn primary" data-go="add" type="button">Tambah kontak</button><button class="btn" data-go="bulk" type="button">Tempel banyak</button><button class="btn" data-go="restore" type="button">Pulihkan cadangan</button></div></div>'}
+  else if(!list.length){box.innerHTML='<div class="empty"><h2>Tidak ada yang cocok</h2><p>Coba kata lain atau sebagian nomor saja.</p></div>'}
+  else{const groups=new Map();for(const c of list){const L=(c.name.trim()[0]||'#').toLocaleUpperCase('id');const k=/\p{L}/u.test(L)?L:'#';if(!groups.has(k))groups.set(k,[]);groups.get(k).push(c)}
+    azIdx=[...groups.keys()];box.innerHTML=[...groups].map(([k,items],gi)=>'<section class="group" id="g'+gi+'"><h2 class="tab">'+esc(k)+'</h2><ul>'+items.map(c=>
+      '<li class="card"><button class="main" type="button" data-id="'+esc(String(c.id))+'"><span class="nm">'+esc(c.name)+'</span>'+(c.name===c.phone?'':'<span class="ph">'+esc(c.phone)+(c.label?' · '+esc(c.label):'')+'</span>')+(c.phones&&c.phones.length?'<span class="more">+'+c.phones.length+' nomor lain</span>':'')+(c.description?'<span class="ds">'+esc(c.description)+'</span>':'')+'</button>'+
+      '<div class="quick"><a class="btn" href="'+esc(telLink(c.phone))+'">Telepon</a><a class="btn wa" target="_blank" rel="noopener" href="'+esc(waLink(c.phone))+'">WA</a></div></li>').join('')+'</ul></section>').join('')}
+  if(q&&list.length)box.insertAdjacentHTML('afterbegin','<div class="bar"><span>'+list.length+' kontak cocok</span><button class="btn" type="button" data-go="label">Beri label ke semua yang cocok</button></div>');
+  renderAZ();renderNotice();renderBackupInfo()}
+$('search').addEventListener('input',render);
+$('contactList').addEventListener('click',e=>{
+  const go=e.target.closest('[data-go]');if(go){({add:()=>openForm(),bulk:openBulk,restore:()=>$('jsonFile').click(),label:openLabel})[go.dataset.go]();return}
+  const m=e.target.closest('.main');if(m)openView(m.dataset.id)});
+
+/* ---------- add / edit / view / delete ---------- */
+function addExtraRow(n,l,focus){const row=document.createElement('div');row.className='xrow';
+  row.innerHTML='<input class="xl" maxlength="30" placeholder="Label" aria-label="Label nomor lain"><input class="xn" maxlength="40" inputmode="tel" placeholder="Nomor lain" aria-label="Nomor lain"><button type="button" class="btn danger xdel" aria-label="Hapus nomor ini">×</button>';
+  row.querySelector('.xl').value=l||'';row.querySelector('.xn').value=n||'';row.querySelector('.xdel').onclick=()=>row.remove();$('extraList').append(row);if(focus)row.querySelector('.xn').focus()}
+$('addNumBtn').onclick=()=>addExtraRow('','',true);
+function openForm(c,addNum){$('form').reset();$('extraList').replaceChildren();$('editId').value=c?c.id:'';if(c){$('name').value=c.name;$('phone').value=c.phone;$('plabel').value=c.label||'';$('description').value=c.description||'';(c.phones||[]).forEach(p=>addExtraRow(p.n,p.l,false))}
+  $('formTitle').textContent=c?'Edit kontak':'Tambah kontak';$('saveBtn').textContent=c?'Simpan perubahan':'Simpan';$('formDlg').showModal();if(addNum)addExtraRow('','',true);else $('name').focus()}
+$('phone').addEventListener('input',e=>e.target.setCustomValidity(normPhone(e.target.value).length<3?'Masukkan nomor telepon yang valid.':''));
+$('fab').onclick=()=>openForm();$('formCancel').onclick=()=>$('formDlg').close();
+$('form').addEventListener('submit',async e=>{e.preventDefault();if(busy)return;
+  const id=$('editId').value;const item={name:$('name').value.trim(),phone:$('phone').value.trim(),description:$('description').value.trim(),updatedAt:new Date().toISOString()};
+  if(!item.name||!item.phone)return;
+  item.label=$('plabel').value.trim();
+  const own=new Set([normPhone(item.phone)]);
+  item.phones=[...document.querySelectorAll('#extraList .xrow')].map(r=>({n:r.querySelector('.xn').value.trim(),l:r.querySelector('.xl').value.trim()})).filter(p=>{const pk=normPhone(p.n);if(!pk||own.has(pk))return false;own.add(pk);return true});
+  Object.assign(item,fmtContact(item));
+  let dupNum=null;const dup=contacts.find(c=>String(c.id)!==id&&allNums(c).some(x=>{const hit=own.has(normPhone(x.n));if(hit)dupNum=x.n;return hit}));
+  if(dup){const a=await ask({title:'Nomor sudah ada',text:'Nomor '+dupNum+' sudah tersimpan atas nama '+dup.name+'. Tetap simpan sebagai kontak terpisah?',buttons:[{label:'Tetap simpan',value:'yes',kind:'primary'},{label:'Batal',value:'no'}]});if(a!=='yes')return}
+  busy=true;try{if(id)item.id=mode==='cloud'?id:Number(id);await putContact(item);$('formDlg').close();await refresh();toast(id?'Kontak diperbarui.':'Kontak disimpan.')}catch(err){toast('Gagal menyimpan: '+err.message,'error')}finally{busy=false}});
+function openLabel(){if(!lastList.length)return;$('labelInfo').textContent='Label akan diberikan ke '+lastList.length+' kontak yang sedang tampil, menggantikan label nomor utama yang sudah ada.';$('lblText').value='';$('labelDlg').showModal();$('lblText').focus()}
+$('labelCancel').onclick=()=>$('labelDlg').close();
+$('labelForm').addEventListener('submit',async e=>{e.preventDefault();if(busy)return;const v=$('lblText').value.trim();if(!v)return;const targets=lastList.slice();busy=true;
+  try{const t=new Date().toISOString();await pool(targets,c=>putContact({...c,label:v,updatedAt:t}));$('labelDlg').close();await refresh();toast('Label '+v+' diberikan ke '+targets.length+' kontak.')}catch(err){toast('Gagal memberi label: '+err.message,'error')}finally{busy=false}});
+let viewing=null;
+function openView(id){const c=contacts.find(x=>String(x.id)===String(id));if(!c)return;viewing=c;$('vName').textContent=c.name;$('vDesc').textContent=c.description||'';$('vDesc').hidden=!c.description;
+  const box=$('vNums');box.replaceChildren();
+  allNums(c).forEach(x=>{const row=document.createElement('div');row.className='nrow';
+    row.innerHTML='<div><div class="big"></div><small></small></div><div class="nact"><button class="btn" type="button">Salin</button><a class="btn">Telepon</a><a class="btn wa" target="_blank" rel="noopener">WA</a></div>';
+    row.querySelector('.big').textContent=x.n;const sm=row.querySelector('small');sm.textContent=x.l||'';sm.hidden=!x.l;
+    row.querySelector('button').onclick=()=>copyText(x.n);const as=row.querySelectorAll('a');as[0].href=telLink(x.n);as[1].href=waLink(x.n);box.append(row)});
+  $('viewDlg').showModal()}
+$('vClose').onclick=()=>$('viewDlg').close();
+$('vAddNum').onclick=()=>{const c=viewing;$('viewDlg').close();openForm(c,true)};
+$('vEdit').onclick=()=>{const c=viewing;$('viewDlg').close();openForm(c)};
+$('vDel').onclick=async()=>{const c=viewing;$('viewDlg').close();
+  try{await deleteById(c.id);await refresh();toastUndo(c.name+' dihapus.',async()=>{await putContact(c);await refresh()})}catch(err){toast('Gagal menghapus: '+err.message,'error')}};
+
+/* ---------- bulk paste ---------- */
+const PHONE_FULL=/^\+?\d[\d\s().-]{5,}\d$/,PHONE_FIND=/\+?\d[\d\s().-]{5,}\d/;
+function cleanName(s){return s.replace(/^[\s~\-–—:•*|]+|[\s\-–—:•*|(]+$/g,'').replace(/\s+/g,' ').trim()}
+function parseLine(line){
+  line=String(line).replace(/[‎‏‪-‮⁦-⁩]/g,'').replace(/[  ]/g,' ').trim();if(!line)return null;
+  const parts=(line.includes('\t')?line.split('\t'):line.split(/\s*[;,]\s*/)).map(x=>x.trim()).filter(Boolean);
+  if(parts.length>=2){const ix=parts.findIndex(x=>PHONE_FULL.test(x));if(ix>=0){const rest=parts.filter((_,i)=>i!==ix);if(rest.length)return{name:cleanName(rest[0])||parts[ix],phone:parts[ix],description:rest.slice(1).join(', ')}}}
+  const m=line.match(PHONE_FIND);if(!m)return null;
+  const phone=m[0].trim(),name=cleanName(line.slice(0,m.index)+' '+line.slice(m.index+m[0].length));
+  return{name:name||phone,phone,description:''}}
+function openBulk(){$('bulkText').value='';updateParseInfo();$('bulkDlg').showModal();$('bulkText').focus()}
+function updateParseInfo(){const lines=$('bulkText').value.split(/\r?\n/).filter(l=>l.trim());const ok=lines.map(parseLine).filter(Boolean).length;
+  $('parseInfo').textContent=lines.length?ok+' baris dikenali'+(lines.length-ok?', '+(lines.length-ok)+' baris tidak punya nomor dan akan dilewati.':'.'):'Belum ada baris.';$('bulkAdd').disabled=!ok}
+$('bulkText').addEventListener('input',updateParseInfo);$('bulkClose').onclick=()=>$('bulkDlg').close();
+$('bulkAdd').onclick=async()=>{if(busy)return;const a=$('bulkText').value.split(/\r?\n/).map(parseLine).filter(Boolean);if(!a.length)return;busy=true;
+  try{const r=await addMany(a);$('bulkDlg').close();await refresh();toast(r.added+' kontak ditambahkan'+(r.dup?', '+r.dup+' dilewati karena nomor sudah ada':'')+'.')}catch(e){toast('Gagal menambahkan: '+e.message,'error')}finally{busy=false}};
+
+/* ---------- files: CSV / JSON ---------- */
+async function saveFile(name,data){
+  const dl=await (window.claude&&window.claude.use?window.claude.use('downloads'):null);
+  if(!dl){try{const type=/\.json$/.test(name)?'application/json':'text/csv';const url=URL.createObjectURL(new Blob([data],{type:type+';charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000);return true}catch(e){toast('Gagal menyimpan file: '+e.message,'error');return false}}
+  try{await dl.save({filename:name,data});return true}catch(e){toast(e&&e.code==='declined'?'Penyimpanan dibatalkan.':'Gagal menyimpan file'+(e&&e.message?': '+e.message:'.'),'error');return false}}
+function csvCell(s){let v=String(s??'');if(/^[=@]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"'}
+function csvPhone(s){return '"=""'+String(s??'').replace(/"/g,'')+'"""'}
+function sortedContacts(){return contacts.slice().sort((a,b)=>a.name.localeCompare(b.name,'id'))}
+function parseCsv(text,delim=','){const rows=[];let row=[],cell='',quoted=false;for(let i=0;i<text.length;i++){const ch=text[i];if(ch==='"'&&quoted&&text[i+1]==='"'){cell+='"';i++}else if(ch==='"')quoted=!quoted;else if(ch===delim&&!quoted){row.push(cell);cell=''}else if((ch==='\n'||ch==='\r')&&!quoted){if(ch==='\r'&&text[i+1]==='\n')i++;row.push(cell);if(row.some(x=>x.trim()))rows.push(row);row=[];cell=''}else cell+=ch}row.push(cell);if(row.some(x=>x.trim()))rows.push(row);return rows}
+async function doBackup(){const day=new Date().toISOString().slice(0,10);
+  const ok=await saveFile('cadangan-buku-telepon-'+day+'.json',JSON.stringify({app:'Buku Telepon Mandiri',version:1,exportedAt:new Date().toISOString(),contacts},null,2));
+  if(ok){await markBackup();render();toast('Cadangan disimpan.')}return ok}
+function tidyPlan(){return contacts.map(c=>{const n=fmtContact(c);const changed=n.name!==c.name||n.phone!==c.phone||JSON.stringify(n.phones||[])!==JSON.stringify(c.phones||[]);return changed?{old:c,next:n}:null}).filter(Boolean)}
+$('mTidy').onclick=async()=>{$('menuDlg').close();const plan=tidyPlan();if(!plan.length){toast('Semua kontak sudah rapi.');return}
+  const x0=plan[0],ex=x0.old.name+' '+x0.old.phone+' → '+x0.next.name+' '+x0.next.phone;
+  const left=contacts.filter(c=>{const n=(plan.find(x=>x.old.id===c.id)||{}).next||c;return !String(n.phone).startsWith('0')}).length;
+  const a=await ask({title:'Rapikan '+plan.length+' kontak?',text:'Nama diubah ke HURUF KAPITAL, awalan +62 atau 62 diganti 0, dan nomor dipisah tiap 4 angka dengan tanda strip. Contoh: '+ex+'.'+(left?' '+left+' kontak bernomor luar negeri tidak diubah.':'')+' Perubahan tidak bisa dibatalkan.',buttons:[{label:'Cadangkan dulu, lalu rapikan',value:'backup',kind:'primary'},{label:'Rapikan saja',value:'go'},{label:'Batal',value:'no'}]});
+  if(!a||a==='no')return;if(a==='backup'&&!(await doBackup())){toast('Dibatalkan karena cadangan belum tersimpan.','error');return}
+  try{const t=new Date().toISOString();await pool(plan,x=>putContact({...x.next,updatedAt:t}));await refresh();toast(plan.length+' kontak dirapikan.')}catch(e){toast('Gagal merapikan: '+e.message,'error')}};
+$('mBackup').onclick=()=>{$('menuDlg').close();doBackup()};
+$('mExport').onclick=async()=>{$('menuDlg').close();if(!contacts.length){toast('Belum ada kontak untuk diekspor.','error');return}
+  const body='﻿sep=;\r\nNama;No Telepon;Keterangan;Nomor Lain;Label\r\n'+sortedContacts().map(c=>[csvCell(c.name),csvPhone(c.phone),csvCell(c.description),csvCell((c.phones||[]).map(p=>(p.l||'Lain')+': '+p.n).join(' | ')),csvCell(c.label||'')].join(';')).join('\r\n');
+  if(await saveFile('rekap-buku-telepon.csv',body))toast('File CSV disimpan.')};
+$('mImport').onclick=()=>{$('menuDlg').close();$('csvFile').click()};
+$('csvFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;
+  try{let text=(await f.text()).replace(/^﻿/,'');let delim=null;const m=text.match(/^sep=(.)\r?\n/i);if(m){delim=m[1];text=text.slice(m[0].length)}
+    if(!delim){const first=text.split(/\r?\n/)[0]||'';const cnt=ch=>first.split(ch).length-1;delim=cnt(';')>cnt(',')?';':(cnt('\t')>Math.max(cnt(','),cnt(';'))?'\t':',')}
+    const rows=parseCsv(text,delim);const clean=v=>String(v||'').trim().replace(/^="(.*)"$/,'$1').replace(/^'(?=[=@])/,'');
+    const hdr=r=>/^nama/i.test((r[0]||'').trim())&&/telepon|nomor|phone|hp/i.test(r[1]||'');
+    const extras=v=>clean(v).split('|').map(t=>t.trim()).filter(Boolean).map(t=>{const m=t.match(/^(.*?):\s*(\+?\d[\d\s().-]*)$/);return m?{n:m[2].trim(),l:m[1].trim()==='Lain'?'':m[1].trim()}:(PHONE_FULL.test(t)?{n:t,l:''}:null)}).filter(Boolean);
+    const data=rows.filter((r,i)=>!(i===0&&hdr(r))).map(r=>({name:clean(r[0]),phone:clean(r[1]),description:clean(r[2]),phones:extras(r[3]),label:clean(r[4])})).filter(x=>x.name&&x.phone);
+    if(!data.length)throw Error('Tidak ada baris kontak. Kolom yang dibutuhkan: Nama, No Telepon, Keterangan.');
+    const r=await addMany(data);await refresh();toast(r.added+' kontak diimpor'+(r.dup?', '+r.dup+' dilewati karena nomor sudah ada':'')+'.')}
+  catch(err){toast('Impor CSV gagal: '+err.message,'error')}e.target.value=''};
+$('mRestore').onclick=()=>{$('menuDlg').close();$('jsonFile').click()};
+$('jsonFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;
+  try{const obj=JSON.parse(await f.text()),data=Array.isArray(obj)?obj:obj.contacts;if(!Array.isArray(data))throw Error('Format cadangan tidak dikenali.');
+    const valid=data.filter(x=>x&&String(x.name||'').trim()&&String(x.phone||'').trim());if(!valid.length)throw Error('Tidak ada kontak valid di file ini. Data Anda tidak diubah.');
+    const skipped=data.length-valid.length;
+    const text='Memulihkan '+valid.length+' kontak'+(skipped?' ('+skipped+' baris tidak valid dilewati)':'')+(contacts.length?' akan mengganti seluruh '+contacts.length+' kontak yang ada sekarang.':'.');
+    const buttons=contacts.length?[{label:'Cadangkan dulu, lalu pulihkan',value:'backup',kind:'primary'},{label:'Pulihkan tanpa cadangan',value:'go',kind:'danger'},{label:'Batal',value:'no'}]:[{label:'Pulihkan',value:'go',kind:'primary'},{label:'Batal',value:'no'}];
+    const a=await ask({title:'Pulihkan dari cadangan?',text,buttons});if(!a||a==='no')return;
+    if(a==='backup'&&!(await doBackup())){toast('Pemulihan dibatalkan karena cadangan belum tersimpan.','error');return}
+    await replaceAll(valid);await refresh();toast(valid.length+' kontak dipulihkan.')}
+  catch(err){toast('Gagal memulihkan: '+err.message,'error')}finally{e.target.value=''}};
+
+/* ---------- menu + startup ---------- */
+$('menuBtn').onclick=()=>$('menuDlg').showModal();$('menuClose').onclick=()=>$('menuDlg').close();
+$('mBulk').onclick=()=>{$('menuDlg').close();openBulk()};
+async function askPersist(){try{if(navigator.storage&&navigator.storage.persist)return await navigator.storage.persist()}catch{}return false}
+function cloudProblem(e){const msg=e&&e.code==='quota_exceeded'?'Penyimpanan akun penuh. Hapus beberapa kontak lalu coba lagi.':(e&&e.message)||'Terjadi kesalahan.';$('storageStatus').textContent='Sinkronisasi bermasalah: '+msg;toast(msg,'error')}
+async function maybeMigrate(){if(meta.migrated)return;let old=[];try{old=await idbAll()}catch{}if(!old.length)return;
+  const a=await ask({title:'Pindahkan kontak lama?',text:'Ditemukan '+old.length+' kontak yang tersimpan di browser ini. Pindahkan ke akun Claude Anda agar tersinkron di semua perangkat? Nomor yang sudah ada dilewati. Kontak lama di browser ini tidak dihapus.',buttons:[{label:'Pindahkan '+old.length+' kontak',value:'go',kind:'primary'},{label:'Nanti saja',value:'later'},{label:'Jangan tanya lagi',value:'skip'}]});
+  if(a==='go'){try{const r=await addMany(old.map(({id,...r})=>r));toast(r.added+' kontak dipindahkan'+(r.dup?', '+r.dup+' dilewati karena nomor sudah ada':'')+'.');await setMeta({migrated:true})}catch(e){cloudProblem(e)}}
+  else if(a==='skip')await setMeta({migrated:true})}
+async function startCloud(){
+  const cl=window.claude&&window.claude.use?window.claude:null;if(!cl)return false;
+  const[db,user]=await Promise.all([cl.use('db'),cl.use('user')]);if(!db||!user)return false;
+  const uid=await user.id();if(!uid)return false;
+  const book=db.doc('data/users/'+uid+'/book');
+  try{const m=await book.get();meta=m.exists?(m.data()||{}):{}}catch{return false}
+  cloud={book,col:book.collection('contacts')};mode='cloud';
+  if(meta.prefs){prefs={...prefs,...meta.prefs};applyPrefs();try{localStorage.setItem('prefs',JSON.stringify(prefs))}catch{}}
+  await new Promise(resolve=>{
+    syncTimer=setTimeout(()=>{$('storageStatus').textContent='Belum tersambung ke akun. Menampilkan data tersimpan terakhir.';resolve()},10000);
+    cloud.col.onSnapshot(snap=>{contacts=snap.docs.map(d=>({...d.data(),id:d.id}));render();
+      if(!snap.metadata.fromCache){clearTimeout(syncTimer);$('storageStatus').textContent=SYNC_OK;resolve()}},
+      err=>{clearTimeout(syncTimer);cloudProblem(err);resolve()})});
+  await maybeMigrate();return true}
+startCloud().catch(()=>false).then(ok=>{if(ok)return;mode='idb';
+  return openDB().then(refresh).then(askPersist).then(p=>{$('storageStatus').textContent=(p?'Penyimpanan dilindungi dari pembersihan otomatis browser. ':'')+'Mode lokal: kontak hanya ada di browser ini dan bisa hilang jika data situs dibersihkan. Simpan cadangan JSON secara berkala.'})})
+  .catch(e=>{dbError=e&&e.message?e.message:String(e);$('countLine').textContent='Penyimpanan tidak tersedia';$('storageStatus').textContent=dbError;renderNotice()});
+</script>
+
+</body></html>
